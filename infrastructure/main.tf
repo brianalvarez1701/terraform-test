@@ -27,14 +27,3 @@ resource  "azuread_service_principal"  "app" {
 resource  "azuread_application_password"  "example" {
     application_object_id  =  azuread_application.app.object_id
 }
-
-# Output the Service Principal and password
-output  "app" {
-    value  =  azuread_application.app.id
-    sensitive  =  true
-}
-
-output  "app_password" {
-    value  =  azuread_application_password.example.value
-    sensitive  =  true
-}
