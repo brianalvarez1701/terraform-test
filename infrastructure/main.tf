@@ -1,5 +1,5 @@
 resource "azurerm_service_plan" "splanname" {
-  name                = "test-test-test"
+  name                = "test-service-plan"
   location            = var.location
   resource_group_name = var.resource_group_name
   os_type             = "Windows"
@@ -7,7 +7,7 @@ resource "azurerm_service_plan" "splanname" {
 }
 
 resource "azurerm_windows_web_app" "appservicename" {
-  name                = "test-test-test"
+  name                = "test-app-service"
   location            = var.location
   resource_group_name = var.resource_group_name
   service_plan_id     = azurerm_service_plan.splanname.id
