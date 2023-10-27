@@ -1,8 +1,8 @@
 variable "resource_group_name" {
-    type = "string"
+    type = string
     default = "rg-brian"
 }
 variable "location" {
-    type = "string"
+    type = string
     default = "eastus"
 }
